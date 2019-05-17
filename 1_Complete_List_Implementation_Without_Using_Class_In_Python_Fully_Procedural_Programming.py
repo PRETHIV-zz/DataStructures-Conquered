@@ -1,13 +1,35 @@
 #Linklist without using class in python
+
+
+
+#Dear git visitor first of all i would like to explain u all whats the main difference between others link list implementation and mine version
+#Normally in c++ or c when i pass a node reference it is passed as a pointer as it is a reference so any changes done within the function 
+#will be reflected in the reference variable itself
+#But in python i tried similar approach end up getting wrong or unexpected answer
+#As i am a newbie to python i don't know how to implement in python later i found there is no pointers in python
+#hence the reference is a passed just as value
+#so whatever the updates done within the function is not reflected back
+#Hence i decided to compute the head value once the neccessary list action is performed within the function
+#and return the head value to the main function ence the new head value is updated if any
+
+
+
+#CODER_ROCKY
+
+#Specifying the Object Node
 class Node:
-    def __init__(self,data):
-        self.data=data
-        self.link=None
+    def __init__(self,data):    #constructor for object
+        self.data=data          #data attribute for the node
+        self.link=None          #i used link instead of next coz i am using the name link since childhood
+
+        
+#Print the complete list
+
 
 def printlist(head):
-    print("*******************************************")
-    print()
-    while head!=None:
+    print("*******************************************") #just for beautification purpose nothing big
+    print()                                              #as said above
+    while head!=None:                                    #loop to iterate through the list until it reaches end
         print(head.data,end="=>")
         head=head.link
     print("None")
