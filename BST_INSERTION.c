@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+//Hi i am Prethiv "THE SO CALLED C PROGRAMMER"
+//For more info about this program visit BST_INORDER_TRAVERSAL
 struct Node{
     int data;
     struct Node *left,*right;
