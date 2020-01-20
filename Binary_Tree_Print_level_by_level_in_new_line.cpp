@@ -1,3 +1,6 @@
+/*
+Whats special in this is i used one queue approach and i am using NULL as my delimiter...
+*/
 #include<iostream>
 #include<queue>
 
