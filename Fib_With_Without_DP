@@ -1,0 +1,55 @@
+#include<stdio.h>
+//DP_NOT
+long long int mem[56],ind=0;
+long long int fib(long long int n)
+{
+	if(ind>=n)
+	{
+		return mem[n];
+	}
+	if(n==0)
+	{
+		return 0;
+	}
+	else if(n==1)
+	{
+		return 1;}
+	else{
+		mem[n]=fib(n-1)+fib(n-2);
+		ind=n;
+		return mem[n];
+	}
+}
+
+long long int NoDPfib(long long int no)
+{
+	if(no==0){
+		return 0;
+	}
+	
+	else if(no==1)
+	{
+		return 1;
+	}
+	
+	else{
+		return NoDPfib(no-1)+NoDPfib(no-2);
+	}
+	
+}
+
+int main()
+{
+	
+	mem[0]=0;
+	mem[1]=1;
+	ind=1;
+	
+	printf("\nFib is %lld",fib(50));
+	
+	
+	printf("\nNext\n");
+	printf("\nFib without Dp %lld",NoDPfib(50));
+	
+	return 0;
+}
